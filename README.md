@@ -1,9 +1,6 @@
 # Pyanimation
 
-My Attempt as a beginner programmer to recreate the Manim Math Animation Tool created by 3Blue1Brown. This is solely to develop my personal understanding and familiarity with python and coding logic.
+My Attempt as a beginner programmer to recreate the Manim Math Animation Tool created by 3Blue1Brown. This is to develop my personal understanding and familiarity with python, coding structure and logic, and yt.
 
-## Update : July 31, 2026
-Currently has Polygon, Arc, Text, and Function drawing capabilities, along with animation functions for each object **excluding** Text. Next step is to add a lot more functions onto the Function object, such as:
-- limit drawing
-- text adding on axes, points, etc.
-- ability to add points on graph
+## Update : August 26, 2026
+Currently working on double-slit diffraction animation, keeping tkinter elements on screen past next render, adding move and size functions for all elements (minus a few).
