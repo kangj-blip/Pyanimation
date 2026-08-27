@@ -1,4 +1,5 @@
 import tkinter as tk
+import time
 
 
 class Engine:
@@ -15,6 +16,11 @@ class Engine:
 	def animate(self,obj,steps):
 		obj.animate(self.canvas,steps)
 
+	def particleAnimate(self,obj,n,steps):
+		for n in range(n):
+			obj.particleAnimate(self.canvas,n,steps)
+
+
 
 	# Function Renders
 	def funcInf(self,func):
@@ -26,10 +32,10 @@ class Engine:
 
 	# tranformers
 	def move(self,obj,delta_x,delta_y,steps):
-		obj.move(self.canvas,delta_x,delta_y,steps)
+		obj.move(self.canvas,delta_x,delta_y,steps,0)
 
 	def size(self,obj,delta_size,steps):
-		obj.size(self.canvas,delta_size,steps)
+		obj.size(self.canvas,delta_size,steps,0)
 
 
 	# Group Activity
@@ -42,13 +48,24 @@ class Engine:
 			obj.animate(self.canvas)
 
 	def groupMove(self,objects,delta_x,delta_y,steps):
-		for obj in objects:
-			obj.move(self.canvas,delta_x,delta_y,steps)
+		for i in range(steps + 1):
+			self.canvas.delete("all")
+
+			for obj in objects:
+				obj.move(self.canvas,delta_x,delta_y,steps,i)
+
+			self.canvas.update()
+			time.sleep(0.001)
 
 	def groupSize(self,objects,delta_size,steps):
-		for obj in objects:
-			obj.size(self.canvas,delta_size,steps)
+		for i in range(steps + 1):
+			self.canvas.delete("all")
 
+			for obj in objects:
+				obj.size(self.canvas,delta_size,steps,i)
+
+			self.canvas.update()
+			time.sleep(0.001)
 
 
 

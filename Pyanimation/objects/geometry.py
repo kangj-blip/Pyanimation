@@ -33,15 +33,32 @@ class Line:
 	def render(self,canvas):
 		canvas.create_line(self.x1,self.y1,self.x2,self.y2,fill = self.color,width = 3)
 
-	def move(self,canvas,delta_x,delta_y,steps):
-		for i in range(steps + 1):
+	def animate(self,canvas,steps):
+		x_range = abs(self.x1 - self.x2)
+		y_range = abs(self.y1 - self.y2)
 
-			canvas.delete("all")
-			canvas.create_line(self.x1 + delta_x * i / steps,self.y1 + delta_y * i / steps,self.x2 + delta_x * i / steps,self.y2 + delta_y * i / steps,fill = color,width = 3)
+		for i in range(steps + 1):
+			canvas.create_line(self.x1,self.y1,self.x1 + x_range * i / steps,self.y1 + y_range * i / steps,fill = self.color,width = 3)
 
 			canvas.update()
 			time.sleep(0.001)
 
+	def move(self,canvas,delta_x,delta_y,steps,i):
+		canvas.create_line(self.x1 + delta_x * i / steps,self.y1 + delta_y * i / steps,self.x2 + delta_x * i / steps,self.y2 + delta_y * i / steps,fill = self.color,width = 3)
+
+	def size(self,canvas,delta_size,steps,i):
+		canvas.create_line(self.x1 + (delta_size / 2) * i / steps,self.y1 + (delta_size / 2) * i / steps,self.x2 + (delta_size / 2) * i / steps,self.y2 + (delta_size / 2) * i / steps,fill = self.color,width = 3)
+
+	def particleAnimate(self,canvas,n,steps):
+		x_range = abs(self.x1 - self.x2)
+		y_range = abs(self.y1 - self.y2)
+
+		for i in range(steps + 1):
+			canvas.delete("all")
+			canvas.create_oval(self.x1 + x_range * i / steps - 2,self.y1 + y_range * i / steps - 2,self.x1 + x_range * i / steps + 2,self.y1 + y_range * i / steps + 2,outline = self.color,fill = self.color,width = 3)
+
+			canvas.update()
+			time.sleep(0.001)
 
 
 class Arc:
@@ -84,29 +101,18 @@ class Arc:
 			canvas.update()
 			time.sleep(0.001)
 
-	def move(self,canvas,delta_x,delta_y,steps):
+	def move(self,canvas,delta_x,delta_y,steps,i):
 		x,y = self.cen
 
-		for i in range(steps + 1):
-			self.cen = (x + delta_x * i / 20, y + delta_y * i / 20)
+		self.cen = (x + delta_x * i / 20, y + delta_y * i / 20)
 			
-			canvas.delete("all")
-			self.render(canvas)
 
-			canvas.update()
-			time.sleep(0.001)
-
-	def size(self,canvas,delta_size,steps):
+	def size(self,canvas,delta_size,steps,i):
 		r = self.r
 
-		for i in range(steps + steps):
-			self.r = r + delta_size * i / steps
+		self.r = r + delta_size * i / steps
 
-			canvas.delete("all")
-			self.render(canvas)
-
-			canvas.update()
-			time.sleep(0.001)
+		self.render(canvas)
 
 
 class Circle(Arc):
