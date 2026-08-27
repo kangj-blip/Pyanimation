@@ -5,8 +5,6 @@ from objects.geometry import Line, Arc, Circle, Polygon, Rect, Square, SemiCircl
 from objects.function import Graph, Function, Point
 from objects.text import Text
 
-DeltColor = "#eb00c3"
-
 
 #scene = Scene()
 engine = Engine()
@@ -15,24 +13,24 @@ engine = Engine()
 
 
 # How to make a Circle (make ang negative to make the arc go clockwise)
-circle = Circle(r = 300,cen = (750,430),start_ang = math.pi / 2,color = DeltColor)
+circle = Circle(r = 300,cen = (750,430),start_ang = math.pi / 2,color = "white")
 engine.animate(circle,steps = 20)
 
 # How to move objects
 engine.move(circle,20,-20,25)
 
 # How to make a Rectangle
-rect = Rect(100,50,200,100,DeltColor)
+rect = Rect(100,50,200,100,"white")
 engine.animate(rect,10)
 
 # How to make a Square
-sq = Square(100,50,DeltColor)
+sq = Square(100,50,"white")
 engine.animate(sq,10)
 
 
 # How to make a Graph and plot a Function
 graph = Graph(origin = (110,710),x_range = (-5,10),y_range = (-5,10),x_length = 900,y_length = 500,x_name = "x-axis",y_name = "y-axis")
-f = Function(graph = graph,func = lambda x: x,x_range = (0,10),n = 10,func_name = "f(x)",color = DeltColor)
+f = Function(graph = graph,func = lambda x: x,x_range = (0,10),n = 10,func_name = "f(x)",color = "white")
 engine.render(graph)
 engine.animate(f,30)
 
