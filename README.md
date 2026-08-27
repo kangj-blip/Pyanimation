@@ -1,5 +1,7 @@
 # Pyanimation
 
+<img width="1064" height="683" alt="Screenshot 2026-08-27 at 10 05 15 AM" src="https://github.com/user-attachments/assets/7991fa96-2128-41f3-9ae0-2c662beee171" />
+
 Pyanimation is a Math and Physics Animation Tool inspired by the Manim Math Animation Tool created by 3Blue1Brown. This is a personal passion project to develop my personal understanding and familiarity with python, coding structure and logic.
 
 ## Update : August 26, 2026
