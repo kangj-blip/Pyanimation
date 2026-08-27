@@ -1,6 +1,6 @@
 # Pyanimation
 
-Math and Physics Animation Tool inspired by the Manim Math Animation Tool created by 3Blue1Brown. This is a personal passion project to develop my personal understanding and familiarity with python, coding structure and logic.
+Pyanimation is a Math and Physics Animation Tool inspired by the Manim Math Animation Tool created by 3Blue1Brown. This is a personal passion project to develop my personal understanding and familiarity with python, coding structure and logic.
 
 ## Update : August 26, 2026
 Currently working on double-slit diffraction animation, keeping tkinter elements on screen past next render, adding move and size functions for all elements (minus a few).
