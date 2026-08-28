@@ -14,33 +14,23 @@ Python 3.11 or newer required. You can use a official installer or a package man
 ```
 # For macOS with Homebrew
 brew install python 
-
-# For Linux with Ubuntu, Debian
-sudo apt update
-sudo apt install python
-
-# For Linux with Fedora or RHEL
-sudo dnf install python
 ```
-If you have python already, check version by running:
+or equivalent for your Operating System.
+If you have python already, check version by running ```python --version```
+
+Also install imagemagick ffmpeg.
 ```
-# For windows
-python --version
-
-# For macOS
-python3 --version
-
-# For Linux
-python3.11 --version
-
-# Expected output
-Python 3.11._
+# For macOS with Homebrew
+brew install imagemagick 
+brew install ffmpeg
 ```
+or equivalent for your Operating System.
+
 Download the Pyanimation folder. Inside is a test.py file to demonstrate what Pyanimation can do, and a playground.py file
 
 # Functions
 
-Most objects have the render and animate functions. ```.move```, ```.size```, and ```.particleAnimate``` are in the process of being added.
+Most objects have the render and animate functions. ```.move```, ```.size```, and ```.particleAnimate``` are in the process of being added. Check the current **engine.py** file for more info.
 
 ```.render``` : draws the object
 ```.animate``` : animates the drawing of the object
