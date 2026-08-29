@@ -9,24 +9,22 @@ Pyanimation is a Math and Physics Animation Tool inspired by the Manim Math Anim
 ### Update : August 26, 2026
 Currently working on keeping tkinter elements on screen past next render, adding move and size functions for all elements (minus a few). Also working on adding fill / outline options, like hatching, fill, dotted, etc.
 
-## Setup
-Python 3.11 or newer required. You can use a official installer or a package manager.
+## Requirements
+Python 3.11 or newer is required. 
+### 1. Clone the repository
 ```
-# For macOS with Homebrew
-brew install python 
+git clone https://github.com/kangj-blip/Pyanimation
 ```
-or equivalent for your Operating System.
-If you have python already, check version by running ```python --version```
-
-Also install imagemagick ffmpeg.
+### 2. Install dependencies
 ```
-# For macOS with Homebrew
-brew install imagemagick 
-brew install ffmpeg
+cd Pyanimation
+pip install -r requirements.txt
 ```
-or equivalent for your Operating System.
-
-Download the Pyanimation folder. Inside is a test.py file to demonstrate what Pyanimation can do, and a playground.py file
+### 3. Open test.py
+```
+python test.py
+```
+Do download Python, run ```install python``` or your OS equivalent. If you have Python already, check version by running ```python --version```.
 
 # Functions
 
