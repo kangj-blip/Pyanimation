@@ -50,7 +50,7 @@ class Engine:
 	def animate(self,obj,steps):
 		'''
 		Animated render of object
-		DONE : Line, Arc (checked for Circle #ISSUE), Polygon (checked for Rect, Square), Function (checked for func = lambda x: x), Graph
+		DONE : Line, Arc (checked for Circle #ISSUE), Polygon (checked for Rect, Square), Graph, Function (checked for func = lambda x: x)
 		IN PROGRESS : Text
 		MISSING : Point
 		'''
