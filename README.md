@@ -6,8 +6,8 @@ Pyanimation is a Math and Physics Animation Tool inspired by the Manim Math Anim
 
 ---
 
-### Update : August 26, 2026
-Currently working on keeping tkinter elements on screen past next render, adding move and size functions for all elements (minus a few). Also working on adding fill / outline options, like hatching, fill, dotted, etc.
+### Update : August 29, 2026
+Currently working on keeping tkinter elements on screen past next render, adding move and size functions for all elements (minus a few). Also working on adding fill / outline options, like hatching, fill, dotted, etc. and recording canvas on run.
 
 ## Requirements
 Python 3.11 or newer is required. 
